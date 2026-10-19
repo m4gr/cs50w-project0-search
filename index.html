@@ -1,21 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #202124;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            margin-bottom: 100px;
+        }
+
+        .logo {
+            font-size: 90px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+
+        .blue { color: #4285F4; }
+        .red { color: #EA4335; }
+        .yellow { color: #FBBC05; }
+        .green { color: #34A853; }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-box {
+            width: 80%;
+            max-width: 580px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        .search-box:hover, .search-box:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            border-color: rgba(223,225,229,0);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .buttons input[type="submit"] {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-size: 14px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+
+        .buttons input[type="submit"]:hover {
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            color: #202124;
+        }
+    </style>
 </head>
 <body>
-    <h1>Google</h1>
-    
-    <form action="https://www.google.com/search">
-        <input type="text" name="q" placeholder="Ask Google">
-        <input type="submit" value="Google search">
-    </form>
-    
-    <a href="images.html">Search for image</a>
-    <a href="advance.html">Search for advance search</a>
+
+    <div class="navbar">
+        <a href="images.html">Images</a>
+        <a href="advanced.html">Advanced Search</a>
+    </div>
+
+    <div class="main-container">
+        <div class="logo">
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
+
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" class="search-box">
+            
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
